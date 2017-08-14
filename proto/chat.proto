@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+service Chat {
+  rpc Join(JoinRequest) returns (JoinResponse) {}
+  rpc Say(SayRequest) returns (SayResponse) {}
+}
+
+message JoinRequest {
+  string name = 1;
+}
+
+message JoinResponse {
+}
+
+message SayRequest {
+  string mes = 1;
+}
+
+message SayResponse {
+}
+
